@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>My Portfolio </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://kit.fontawesome.com/9505b264aa.js" crossorigin="anonymous"></script>
+ 
+    </head>
+    
+<body>
+        <img src="ban.jpg" alt="Banner Image" class="kk">
+        
+        <table id="navigation">
+            <tr>
+                <td><a href="index.html"style="--i:1;"><img src="home.png" alt="Home" width="50px" height="auto"></a></td>
+                <td><a href="skills.html"style="--i:2;"><img src="skills.png"  alt="JavaScripts" width="40px" height="auto"></a></td>
+                <td><a href="works.html"style="--i:3;"><img src="working.png"  alt="Apps" width="50px" height="auto"></a></td>
+                <td><a href="about.html"style="--i:4;"><img src="about.png"  alt="About Me" width="50px" height="auto"></a></td>
+                
+            </tr>
+
+        </table>
+
+    
+    <main>
+
+        <section id="home" class="home">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Santhusha kothalawala</h1>
+                <h3>And I'm a <br><span class="home-text-repeat"></span>&nbsp;</h3>
+                <p>Welcome to my portfolio website! I am a software engineering student specializing in web frontend
+                    development. Proficient in HTML, CSS, Bootstrap, JavaScript, and jQuery, I also have a basic
+                    of React. With knowledge in backend technologies like Node.js, MongoDB, and Express,
+                    I am a potential web developer.If you need a skilled web developer, feel free to explore my portfolio
+                    and reach out via the contact form.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links "onclick="opentab('education')">Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span>2022-2023</span><br>IS undergraduate student at KDu</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents " id="education">
+                        <ul>
+                            <li><span>2022-2023</span><br>IS undergraduate student at KDu</li>
+                            <li><span>2022-2023</span><br>IS undergraduate student at KDu</li>
+
+                        </ul>
+                    </div>
+            
+                <a href="#" class="btn">Download My CV</a>
+    
+            </div>
+    
+            <div class="home-img">
+                <img src="home.jpg" height="500"  alt="">
+            </div>
+    
+        </section>
+
+
+        
+    </main>
+    
+    
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var typed = new Typed(".home-text-repeat", {
+        strings: ["A Web Developer!", "Software Engineer!"],
+        typeSpeed: 50,
+        loop: true,
+        showCursor: false, // Use showCursor instead of hideCursor
+    });
+    });
+
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink  of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent  of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</html>
